@@ -30,10 +30,10 @@ public class TipCalculationManager {
         this.tipOutput = tipOutput;
     }
     
-    public void calculateTip(ServiceQualityInput qualityInput, TipOutput tipOutput){
-        qualityInput.
-        tipOutput.
-    }
-    
+//    public void calculateTip(ServiceQualityInput qualityInput, TipOutput tipOutput){
+//        qualityInput.
+//        tipOutput.
+//    }
+//    
     
 }

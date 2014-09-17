@@ -25,7 +25,15 @@ public class Startup {
  
     public static void main(String[] args) {
         
-        
+        TipCalculator calc = new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD);
+    
+        System.out.println(calc.getTip());
+    
+    
+    
+    
+    
+    
     }
-
+    
 }
