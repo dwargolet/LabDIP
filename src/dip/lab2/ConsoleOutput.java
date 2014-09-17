@@ -10,6 +10,14 @@ package dip.lab2;
  *
  * @author dworgolet
  */
-public class ConsoleOutput {
+public class ConsoleOutput implements TipOutput{
+
+    @Override
+    public void outPutTip(double tip) {
+        System.out.println("Total tip to leave: $" + TipCalculationManager.getTip());
+    }
+    
+    
+    
     
 }
