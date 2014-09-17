@@ -24,14 +24,16 @@ public class Startup {
         
 //        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD));
     
-        TipCalculator calc2 = new BaggageServiceTipCalculator(5, ServiceQuality.GOOD);
+//        TipCalculator calc2 = new BaggageServiceTipCalculator(5, ServiceQuality.GOOD);
         
 //        System.out.println(calc.getTip());
     
-        System.out.println(calc2.getTip());
+//        System.out.println(calc2.getTip());
     
     
+    ServiceQualityInputKeyboard keyb = new ServiceQualityInputKeyboard();
     
+  System.out.print(keyb);
     
     }
     
