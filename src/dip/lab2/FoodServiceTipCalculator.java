@@ -8,25 +8,23 @@ package dip.lab2;
  *
  * @author your name goes here
  */
-public class FoodServiceTipCalculator{
+public class FoodServiceTipCalculator implements TipCalculator{
     private static double MIN_BILL = 0.00;
     private static final String BILL_ENTRY_ERR =
             "Error: bill must be greater than or equal to " + MIN_BILL;
-    private static final double GOOD_RATE = 0.20;
-    private static final double FAIR_RATE = 0.15;
-    private static final double POOR_RATE = 0.10;
-    
+   
     
     private double bill;
     private ServiceQuality serviceQuality;
 
-  
     
-    public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
-        this.setServiceRating(q);
-        this.setBill(billAmt);
+    public FoodServiceTipCalculator(double bill, ServiceQuality serviceQuality) {
+        this.bill = bill;
+        this.serviceQuality = serviceQuality;
     }
 
+    
+    @Override
     public double getTip() {
         double tip = 0.00; // always initialize local variables
 
@@ -52,10 +50,12 @@ public class FoodServiceTipCalculator{
         bill = billAmt;
     }
 
+    @Override
     public ServiceQuality getServiceQuality(){
         return serviceQuality;
     }
     
+    @Override
     public void setServiceRating(ServiceQuality q){
         serviceQuality = q;
     }
