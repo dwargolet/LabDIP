@@ -1,5 +1,5 @@
 package dip.lab2;
-import Java.util.Scanner;
+
 /**
  * An example low-level class. Does this class definition follow the DIP?
  * If not, fix it.
@@ -18,12 +18,11 @@ public class FoodServiceTipCalculator{
     
     
     private double bill;
-   
-//    private ServiceQuality serviceQuality;
+    private ServiceQuality serviceQuality;
 
   
     
-    public FoodServiceTipCalculator(ServiceQualityInput.serviceQuality q, double billAmt) {
+    public FoodServiceTipCalculator(ServiceQuality q, double billAmt) {
         this.setServiceRating(q);
         this.setBill(billAmt);
     }
@@ -53,5 +52,12 @@ public class FoodServiceTipCalculator{
         bill = billAmt;
     }
 
-
+    public ServiceQuality getServiceQuality(){
+        return serviceQuality;
+    }
+    
+    public void setServiceRating(ServiceQuality q){
+        serviceQuality = q;
+    }
+    
 }
