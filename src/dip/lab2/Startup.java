@@ -20,13 +20,14 @@ public class Startup {
  
     public static void main(String[] args) {
         
-//        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD));
+        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD));
     
-        TipCalculator calc2 = new FoodServiceTipCalculator(0, ServiceQuality.GOOD);
+//        TipCalculator calc2 = new FoodServiceTipCalculator(0, ServiceQuality.GOOD);
         
+        calc.displayTipCalculation();
 //        System.out.println(calc.getTip());
     
-        calc2.informTipTotal();
+//        calc2.informTipTotal();
     
     
 //    TipCalculationManager test1 = new TipCalculationManager(new FoodServiceTipCalculator(5.2, ServiceQuality.GOOD));

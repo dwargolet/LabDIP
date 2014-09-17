@@ -9,6 +9,11 @@ public class TipCalculationManager {
     private TipCalculator calculateTip;
   
 
+     public TipCalculationManager(TipCalculator calculateTip) {
+        this.calculateTip = calculateTip;
+        
+    }
+     
     public TipCalculator getCalculateTip() {
         return calculateTip;
     }
@@ -17,14 +22,17 @@ public class TipCalculationManager {
         this.calculateTip = calculateTip;
     }
 
-    public TipCalculationManager(TipCalculator calculateTip) {
-        this.calculateTip = calculateTip;
-        
-    }
-     
+   
+    public double getTip(){
+        return calculateTip.getTip();
+    } 
+    
+    
+    
 
-    public void processTipCalculation(){
-        calculateTip.getTip();
-        calculateTip.getServiceQuality();
+    public void displayTipCalculation(){
+        
+        System.out.println("You should leave a tip of $" + calculateTip.getTip());
+        
     }
 }
