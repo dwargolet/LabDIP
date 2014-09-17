@@ -41,7 +41,7 @@ public class FoodServiceTipCalculator implements TipCalculator{
     }
 
     public final void setBill(double billAmt) {
-        if(billAmt < minBill) {
+        if(billAmt <= minBill) {
             throw new IllegalArgumentException(BILL_ENTRY_ERR);
         }
         bill = billAmt;
@@ -56,5 +56,9 @@ public class FoodServiceTipCalculator implements TipCalculator{
     public void setServiceRating(ServiceQuality q){
         serviceQuality = q;
     }
-    
+    @Override
+    public void informTipTotal(){
+        
+        System.out.println("You should tip $" + getTip());
+    }
 }

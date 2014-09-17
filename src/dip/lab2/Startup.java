@@ -2,8 +2,6 @@ package dip.lab2;
 
 // An useful import if you need it.
 import java.text.NumberFormat;
-// Another useful import if you need it.
-import javax.swing.JOptionPane;
 
 /**
  * Just a test class for input and output.
@@ -24,16 +22,16 @@ public class Startup {
         
 //        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD));
     
-//        TipCalculator calc2 = new BaggageServiceTipCalculator(5, ServiceQuality.GOOD);
+        TipCalculator calc2 = new FoodServiceTipCalculator(0, ServiceQuality.GOOD);
         
 //        System.out.println(calc.getTip());
     
-//        System.out.println(calc2.getTip());
+        calc2.informTipTotal();
     
     
-    TipCalculationManager test1 = new TipCalculationManager(new FoodServiceTipCalculator(5, ServiceQuality.GOOD));
-   
-    test1.processTipCalculation();
+//    TipCalculationManager test1 = new TipCalculationManager(new FoodServiceTipCalculator(5.2, ServiceQuality.GOOD));
+//   
+//    test1.processTipCalculation();
     }
     
 }

@@ -74,7 +74,11 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         this.baseTipPerBag = baseTipPerBag;
     }
 
-    
+    @Override
+    public void informTipTotal(){
+        
+        System.out.println("You should tip $" + getTip());
+    }
     
 
 }
