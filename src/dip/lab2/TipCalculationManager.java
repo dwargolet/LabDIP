@@ -6,47 +6,25 @@ package dip.lab2;
  */
 public class TipCalculationManager {
     
-    private TipOutput calculateTip;
-    private ServiceQualityInput stateTheQualityOfService;
-    
-    
+    private TipCalculator calculateTip;
+  
 
-    public TipOutput getCalculateTip() {
+    public TipCalculator getCalculateTip() {
         return calculateTip;
     }
 
-    public void setCalculateTip(TipOutput calculateTip) {
+    public void setCalculateTip(TipCalculator calculateTip) {
         this.calculateTip = calculateTip;
     }
 
-    public ServiceQualityInput getStateTheQualityOfService() {
-        return stateTheQualityOfService;
-    }
-
-    public void setStateTheQualityOfService(ServiceQualityInput stateTheQualityOfService) {
-        this.stateTheQualityOfService = stateTheQualityOfService;
-    }
-
-
-    
-    public void calculateTotalTip(){
-        calculateTip.outPutTip(tip);
-        ServiceQualityInput.
-    }
-    
-    
-    
-    
-//    public final void calculateTotalTip(){
-//        calculateTip.outPutTip(TipCalculator.getTip());
-//        stateTheQualityOfService.getServiceQuality();
-//    }
-//            
-
-    public TipCalculationManager(TipOutput calculateTip, ServiceQualityInput stateTheQualityOfService) {
+    public TipCalculationManager(TipCalculator calculateTip) {
         this.calculateTip = calculateTip;
-        this.stateTheQualityOfService = stateTheQualityOfService;
+        
     }
-            
-            
+     
+
+    public void processTipCalculation(){
+        calculateTip.getTip();
+        calculateTip.getServiceQuality();
+    }
 }

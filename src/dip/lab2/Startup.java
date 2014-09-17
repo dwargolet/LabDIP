@@ -31,10 +31,9 @@ public class Startup {
 //        System.out.println(calc2.getTip());
     
     
-    ServiceQualityInputKeyboard keyb = new ServiceQualityInputKeyboard();
-    
-  System.out.print(keyb);
-    
+    TipCalculationManager test1 = new TipCalculationManager(new FoodServiceTipCalculator(5, ServiceQuality.GOOD));
+   
+    test1.processTipCalculation();
     }
     
 }
