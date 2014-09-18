@@ -14,19 +14,19 @@ public class HourlyEmployee implements Employee {
         this.totalHrsForYear = totalHrsForYear;
     }
 
-    public final double getHourlyRate() {
+    public double getHourlyRate() {
         return hourlyRate;
     }
 
-    public final void setHourlyRate(double hourlyRate) {
+    public void setHourlyRate(double hourlyRate) {
         this.hourlyRate = hourlyRate;
     }
 
-    public final double getTotalHrsForYear() {
+    public double getTotalHrsForYear() {
         return totalHrsForYear;
     }
 
-    public final void setTotalHrsForYear(double totalHrsForYear) {
+    public void setTotalHrsForYear(double totalHrsForYear) {
         this.totalHrsForYear = totalHrsForYear;
     }
 

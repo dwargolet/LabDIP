@@ -13,6 +13,10 @@ public class FoodServiceTipCalculator implements TipCalculator{
     private double bill;
     private ServiceQuality serviceQuality;
     private double minBill = 0.00;
+    
+    private static final double GOOD_RATE = 0.20;
+    private static final double FAIR_RATE = 0.15;
+    private static final double POOR_RATE = 0.10;
 
     public FoodServiceTipCalculator(double bill, ServiceQuality serviceQuality) {
         this.bill = bill;

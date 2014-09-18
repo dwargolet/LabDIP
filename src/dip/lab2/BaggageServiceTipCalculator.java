@@ -18,6 +18,9 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private ServiceQuality serviceQuality;
     private final String errorMsg = "Error: Input must be equal to or greater than 0";
 
+    private static final double GOOD_RATE = 0.20;
+    private static final double FAIR_RATE = 0.15;
+    private static final double POOR_RATE = 0.10;
     
     
     public BaggageServiceTipCalculator(int bags, ServiceQuality q) {

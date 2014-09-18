@@ -1,7 +1,7 @@
 package dip.lab2;
 
 // An useful import if you need it.
-//import java.text.NumberFormat;
+import java.text.NumberFormat;
 
 /**
  * Just a test class for input and output.
@@ -19,13 +19,14 @@ package dip.lab2;
 public class Startup {
  
     public static void main(String[] args) {
+        NumberFormat nf = NumberFormat.getCurrencyInstance();
         
         TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(12.50, ServiceQuality.GOOD));
-        calc.displayTipCalculation();
-
-//    TipCalculationManager calc2 = new TipCalculationManager(new BaggageServiceTipCalculator(6, ServiceQuality.FAIR));
-//        calc2.displayTipCalculation();
-//    
+        System.out.println("You should leave a tip of " + nf.format(calc.getTip()));
+    
+        TipCalculationManager calc2 = new TipCalculationManager(new BaggageServiceTipCalculator(6, ServiceQuality.FAIR));
+        System.out.println("You should leave a tip of " + nf.format(calc2.getTip()));
+    
     
 
     }

@@ -9,8 +9,6 @@ public interface TipCalculator {
     public abstract void setServiceRating(ServiceQuality q);
     public abstract double getTip();
 
-    // Questionable, could these rates change?
-    public final double GOOD_RATE = 0.20;
-    public final double FAIR_RATE = 0.15;
-    public final double POOR_RATE = 0.10;
+    
+    
 }
