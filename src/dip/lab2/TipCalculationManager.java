@@ -26,13 +26,10 @@ public class TipCalculationManager {
     public double getTip(){
         return calculateTip.getTip();
     } 
-    
-    
-    
 
     public void displayTipCalculation(){
-        
-        System.out.println("You should leave a tip of $" + calculateTip.getTip());
+        System.out.println("You should leave a tip of $" + 
+                calculateTip.getTip());
         
     }
 }

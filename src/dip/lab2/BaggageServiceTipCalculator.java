@@ -1,6 +1,7 @@
 package dip.lab2;
 
-import java.text.NumberFormat;
+
+import javax.swing.JOptionPane;
 
 /**
  * An example low-level class. Does this class definition follow the DIP?
@@ -15,7 +16,10 @@ public class BaggageServiceTipCalculator implements TipCalculator {
     private double baseTipPerBag;
     private int bagCount;
     private ServiceQuality serviceQuality;
+    private final String errorMsg = "Error: Input must be equal to or greater than 0";
 
+    
+    
     public BaggageServiceTipCalculator(int bags, ServiceQuality q) {
         this.setBagCount(bags);
         this.setServiceRating(q); // perform validation
@@ -55,10 +59,10 @@ public class BaggageServiceTipCalculator implements TipCalculator {
         return bagCount;
     }
 
-    public final void setBagCount(int bagCount) {
+    public void setBagCount(int bagCount) {
         if(bagCount < 0) {
-            throw new IllegalArgumentException(
-                    "Error: bag count must be greater than or equal to zero");
+            JOptionPane.showMessageDialog(null, "cant be 0");
+            
         }
         this.bagCount = bagCount;
     }
@@ -69,8 +73,8 @@ public class BaggageServiceTipCalculator implements TipCalculator {
 
     public void setBaseTipPerBag(double baseTipPerBag) {
         if(baseTipPerBag < 0) {
-            throw new IllegalArgumentException(
-                    "Error: Base tip must be greater than or equal to zero");
+            JOptionPane.showMessageDialog(null, errorMsg);
+            System.exit(0);        
         }
         this.baseTipPerBag = baseTipPerBag;
     }

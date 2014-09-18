@@ -1,7 +1,7 @@
 package dip.lab2;
 
 // An useful import if you need it.
-import java.text.NumberFormat;
+//import java.text.NumberFormat;
 
 /**
  * Just a test class for input and output.
@@ -14,21 +14,18 @@ import java.text.NumberFormat;
  *    high-level class. Did it work? Are the low-level instances
  *    interchangeable? The DIP requires this.
  * 
- * @author your name goes here
+ * @Daniel Wargolet
  */
 public class Startup {
  
     public static void main(String[] args) {
         
-//        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(10.0, ServiceQuality.GOOD));
-    
-//        TipCalculator calc2 = new FoodServiceTipCalculator(0, ServiceQuality.GOOD);
-        
-//        calc.displayTipCalculation();
-//        System.out.println(calc.getTip());
-    TipCalculationManager calc2 = new TipCalculationManager(new BaggageServiceTipCalculator(6, ServiceQuality.FAIR));
-        calc2.displayTipCalculation();
-    
+        TipCalculationManager calc = new TipCalculationManager(new FoodServiceTipCalculator(12.50, ServiceQuality.GOOD));
+        calc.displayTipCalculation();
+
+//    TipCalculationManager calc2 = new TipCalculationManager(new BaggageServiceTipCalculator(6, ServiceQuality.FAIR));
+//        calc2.displayTipCalculation();
+//    
     
 
     }
