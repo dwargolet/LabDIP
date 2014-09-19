@@ -14,19 +14,19 @@ public class SalariedEmployee implements Employee {
         this.annualBonus = annualBonus;
     }
 
-    public final double getAnnualSalary() {
+    public double getAnnualSalary() {
         return annualSalary;
     }
 
-    public final void setAnnualSalary(double annualSalary) {
+    public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }
 
-    public final double getAnnualBonus() {
+    public double getAnnualBonus() {
         return annualBonus;
     }
 
-    public final void setAnnualBonus(double annualBonus) {
+    public void setAnnualBonus(double annualBonus) {
         this.annualBonus = annualBonus;
     }
     
